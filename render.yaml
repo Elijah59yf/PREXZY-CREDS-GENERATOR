@@ -2,7 +2,7 @@ services:
   - type: web
     name: PREXZY-CREDS-GENERATOR
     env: node
-    buildCommand: yarn install --update-checksums
+    buildCommand: yarn config set frozen-lockfile false && yarn install
     startCommand: node index.js
     plan: free
     region: oregon # ou votre région préférée
